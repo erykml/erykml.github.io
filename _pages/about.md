@@ -1,8 +1,8 @@
 ---
 permalink: /about/
 title: "About"
+layout: posts
 author_profile: true
-#toc: true
 ---
 
 I'm a data scientist...
