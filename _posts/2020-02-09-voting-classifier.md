@@ -5,7 +5,7 @@ categories:
 last_modified_at: 2020-02-09
 ---
 
-<img src="../assets/images/voting_classifier.jpg" width="1920" height="1282"/>
+<img src="../assets/images/voting_classifier_image.jpg" width="1920" height="1282"/>
 
 In this article, I describe a simple ensemble algorithm. In general, ensemble models combine multiple base models to improve the predicting performance. The best-known example of an ensemble model is the Random Forest, which — greatly simplifying the algorithm’s logic — combines multiple Decision Trees and aggregates their predictions using majority vote in case of a classification problem or by taking the average for regression tasks.
 
@@ -13,7 +13,7 @@ Similarly to the Random Forest, the Voting Ensemble estimates multiple base mode
 
 The following diagram presents the workflow of the Voting Ensemble:
 
-<img class="ds t u eq ak" src="../assets/images/voting_classifier.png" width="2448" height="828" role="presentation"/>
+<img class="ds t u eq ak" src="../assets/images/voting_classifier_diagram.png" width="2448" height="828" role="presentation"/>
 
 Voting Classifier supports two types of voting:
 
@@ -98,4 +98,4 @@ You can find the code used for this article on my [GitHub](https://github.com/er
 
 I recently published a book on using Python for solving practical tasks in the financial domain. If you are interested, I posted [an article](https://towardsdatascience.com/introducing-my-book-python-for-finance-cookbook-de219ca0d612) introducing the contents of the book. You can get the book on [Amazon](https://www.amazon.com/gp/product/1789618517/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=erykml-20&creative=9325&linkCode=as2&creativeASIN=1789618517&linkId=51dc32b8f827bf696fd898d6071fe53e) (disclaimer: referral link) or [Packt’s website](https://bit.ly/2SbBNcj).
 
-<img class="ds t u eq ak" src="../assets/images/voting_classifier.jpg" width="244" height="304" role="presentation"/>
+<img class="ds t u eq ak" src="../assets/images/book_cover.jpg" width="244" height="304" role="presentation"/>
