@@ -3,6 +3,7 @@ title: "Ensemble learning using the Voting Classifier"
 categories: 
   - Machine Learning
 last_modified_at: 2020-02-09
+toc: true
 ---
 
 <img src="../assets/images/voting_classifier_image.jpg" width="1920" height="1282"/>
