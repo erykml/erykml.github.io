@@ -1,19 +1,11 @@
 ---
 title: "Ensemble learning using the Voting Classifier"
 categories: 
-  - Data Science
+  - Machine Learning
 last_modified_at: 2020-02-09
 ---
 
-<img class="ds t u eq ak" src="https://miro.medium.com/max/3840/1\*jRPs81mYrrmMsgVP9suJrA.jpeg" width="1920" height="1282" role="presentation"/>
-
-Ensemble learning using the Voting Classifier
-=============================================
-
-Learn how to leverage the strengths of multiple models using a variant of ensemble learning
--------------------------------------------------------------------------------------------
-
-[
+<img class="ds t u eq ak" src="../assets/images/voting_classifier.jpg" width="1920" height="1282" role="presentation"/>
 
 In this article, I describe a simple ensemble algorithm. In general, ensemble models combine multiple base models to improve the predicting performance. The best-known example of an ensemble model is the Random Forest, which — greatly simplifying the algorithm’s logic — combines multiple Decision Trees and aggregates their predictions using majority vote in case of a classification problem or by taking the average for regression tasks.
 
@@ -21,7 +13,7 @@ Similarly to the Random Forest, the Voting Ensemble estimates multiple base mode
 
 The following diagram presents the workflow of the Voting Ensemble:
 
-<img class="ds t u eq ak" src="https://miro.medium.com/max/4896/1\*EekXroXi99N05jcskdPsIg.png" width="2448" height="828" role="presentation"/>
+<img class="ds t u eq ak" src="../assets/images/voting_classifier.png" width="2448" height="828" role="presentation"/>
 
 Voting Classifier supports two types of voting:
 
@@ -43,12 +35,16 @@ Setup
 
 We need to import the following libraries:
 
+<script src="https://gist.github.com/erykml/3e0fab80921b7fb9671f7f70f35eae0c.js" charset="utf-8"></script>
+
 The list is quite lengthy, as we need to import different classifiers, which will be used as base estimators.
 
 Preparing the dataset for classification
 ========================================
 
 For simplicity, we prepare the classification dataset using `scikit-learn`’s `make_classification` function. We create a dataset with 500 observations, 10 features. Using the default settings, there are 2 informative features in the dataset and 2 redundant ones. For more information on the function, please refer to the [documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html). We additionally set the `random_state` for reproducibility.
+
+<script src="https://gist.github.com/erykml/cb7a55abac26b9a38f84352f6a494a3f.js" charset="utf-8"></script>
 
 The dataset we created is balanced, with the ratio of label classes of 1:1. We can verify this by running `Counter(y)`.
 
@@ -61,7 +57,11 @@ Fitting the models
 
 As the first step, we define a list of tuples, each one containing the name of the model and the estimator itself. At this point, we are satisfied with the default settings of all the classifiers. We set up the models this way, as the list will be used as the input for the `VotingClassifier` later on.
 
+<script src="https://gist.github.com/erykml/9c10dac904fffcea413973a2f99e0e47.js" charset="utf-8"></script>
+
 In the next step, we iterate over the previously defined list. For each model, we fit it to the training data, predict the labels for the test set and evaluate the performance using accuracy (it is an acceptable metric here, as the classes are balanced). For reproducibility's sake, whenever an estimator has a `random_state` parameter, we set it to 42.
+
+<script src="https://gist.github.com/erykml/de705aae0ed44909a06019ac7e354257.js" charset="utf-8"></script>
 
 The following snippet summarizes the performance of the models:
 
@@ -78,6 +78,8 @@ Using the VotingClassifier
 ==========================
 
 It is time to see if we can improve the performance by using the `VotingClassifier`. We start with the hard voting scheme (majority vote). The following code present how to set it up:
+
+<script src="https://gist.github.com/erykml/4b8d0316c41fbfab46453cbf96930ba8.js" charset="utf-8"></script>
 
 Running the code prints the accuracy score of 0.88, which is slightly better than the best of the base estimators. It seems that this time we could benefit from using the ensemble approach.
 
@@ -96,4 +98,4 @@ You can find the code used for this article on my [GitHub](https://github.com/er
 
 I recently published a book on using Python for solving practical tasks in the financial domain. If you are interested, I posted [an article](https://towardsdatascience.com/introducing-my-book-python-for-finance-cookbook-de219ca0d612) introducing the contents of the book. You can get the book on [Amazon](https://www.amazon.com/gp/product/1789618517/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=erykml-20&creative=9325&linkCode=as2&creativeASIN=1789618517&linkId=51dc32b8f827bf696fd898d6071fe53e) (disclaimer: referral link) or [Packt’s website](https://bit.ly/2SbBNcj).
 
-<img class="ds t u eq ak" src="https://miro.medium.com/max/488/1\*zPB7oDayV2o3vhxMRoAuUw.png" width="244" height="304" role="presentation"/>
+<img class="ds t u eq ak" src="../assets/images/voting_classifier.jpg" width="244" height="304" role="presentation"/>
