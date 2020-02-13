@@ -99,4 +99,4 @@ You can find the code used for this article on my [GitHub](https://github.com/er
 
 I recently published a book on using Python for solving practical tasks in the financial domain. If you are interested, I posted [an article](https://towardsdatascience.com/introducing-my-book-python-for-finance-cookbook-de219ca0d612) introducing the contents of the book. You can get the book on [Amazon](https://www.amazon.com/gp/product/1789618517/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=erykml-20&creative=9325&linkCode=as2&creativeASIN=1789618517&linkId=51dc32b8f827bf696fd898d6071fe53e) (disclaimer: referral link) or [Packt’s website](https://bit.ly/2SbBNcj).
 
-<img class="ds t u eq ak" src="../assets/images/book_cover.jpg" width="244" height="304" role="presentation"/>
+<img src="../assets/images/book_cover.jpg">
