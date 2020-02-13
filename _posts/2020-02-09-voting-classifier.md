@@ -5,7 +5,7 @@ categories:
 last_modified_at: 2020-02-09
 ---
 
-<img class="ds t u eq ak" src="../assets/images/voting_classifier.jpg" width="1920" height="1282" role="presentation"/>
+<img src="../assets/images/voting_classifier.jpg" width="1920" height="1282"/>
 
 In this article, I describe a simple ensemble algorithm. In general, ensemble models combine multiple base models to improve the predicting performance. The best-known example of an ensemble model is the Random Forest, which — greatly simplifying the algorithm’s logic — combines multiple Decision Trees and aggregates their predictions using majority vote in case of a classification problem or by taking the average for regression tasks.
 
