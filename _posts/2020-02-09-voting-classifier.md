@@ -6,7 +6,7 @@ last_modified_at: 2020-02-09
 toc: true
 ---
 
-<img src="https://raw.githubusercontent.com/erykml/erykml.github.io/master/assets/images/voting_clf/voting_classifier_image.png"/>
+<img src="https://raw.githubusercontent.com/erykml/erykml.github.io/master/assets/images/voting_clf/voting_classifier_image.jpg"/>
 
 In this article, I describe a simple ensemble algorithm. In general, ensemble models combine multiple base models to improve the predicting performance. The best-known example of an ensemble model is the Random Forest, which — greatly simplifying the algorithm’s logic — combines multiple Decision Trees and aggregates their predictions using majority vote in case of a classification problem or by taking the average for regression tasks.
 
@@ -14,7 +14,7 @@ Similarly to the Random Forest, the Voting Ensemble estimates multiple base mode
 
 The following diagram presents the workflow of the Voting Ensemble:
 
-<img class="ds t u eq ak" src="../assets/images/voting_classifier_diagram.png" width="2448" height="828" role="presentation"/>
+<img src="../assets/images/voting_classifier_diagram.png"/>
 
 Voting Classifier supports two types of voting:
 
